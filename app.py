@@ -25,6 +25,7 @@ role = st.selectbox("Select Job Role",[
 "HR Executive"
 ])
 if st.button("Generate Interview questions"):
+    prompt = "Generate 5 interview questions for the role of " + role = "with" + diff + "difficulty"
   prompt = "Generate  5 interview questions for the role of " + role
   response = client.chat.completions.create(
     model = "openai/gpt-oss-120b",
